@@ -31,6 +31,22 @@ function play(userChoice)
 
     player.src = "img/"+userChoice+".png";
     player.classList.add("translate-left");
+
+    if((userChoice == 'shi' && iaChoice == 'fu') 
+        || ( userChoice == 'fu' && iaChoice == 'mi')
+        || ( userChoice == 'mi' && iaChoice == 'shi')
+    ) {
+        console.log('j\'ai gagné :)');
+    } else if ((userChoice == 'shi' && iaChoice == 'mi')
+        ||(userChoice == 'fu' && iaChoice == 'shi')
+        || (userChoice == 'mi' && iaChoice == 'fu')
+    ) {
+        console.log('j\'ai perdu :(');
+    } else {
+        console.log('égalité :|');
+    }
+
+
 }
 
 function reset_animation()
